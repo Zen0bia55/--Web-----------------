@@ -8,5 +8,7 @@
 ![用例图(系统管理员)][3]
 [3]:http://fmn.rrimg.com/fmn062/20130529/2240/original_U7PP_3cc6000024461190.jpg
 
+========================================
+类图：
 ![类图][4]
 [4]:http://s13.sinaimg.cn/middle/8e27eb8btddddbfdc136c&690
