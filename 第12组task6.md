@@ -87,4 +87,4 @@ web应用设计
         在页面内容之外的方式向用户提供进入内容的途径
 
 ![系统管理员][1]
-[1]:http://ww1.sinaimg.cn/bmiddle/ad534bbbjw1e5elfdca29j20af0dwdgg.jpg
+[1]:http://ww1.sinaimg.cn/mw690/7e8cc464tw1e5elt1eou2j210a0lbdkx.jpg
