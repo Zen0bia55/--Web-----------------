@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>高校社团信息发布平台-主页（系统管理员）</title>
+<title>主页（普通用户）</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .STYLE1 {
-  color: #CCCCCC;
+	color: #CCCCCC;
 	font-weight: bold;
 }
 .STYLE3 {font-size: 12px}
@@ -15,17 +15,33 @@
 -->
 </style>
 </head>
+
+<body>
 <!--main start -->
 <div id="main">
 <!--left panel start -->
 <div id="left">
-<a href="index.htm"><img src="images/logo1.jpg" alt="社团信息发布平台" width="247" height="97" border="0" class="logo" /></a>
+<a href="adminindex.php"><img src="images/logo1.jpg" alt="Intr type 3" width="247" height="97" border="0" class="logo" /></a>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p align="center"><img src="20130621031316224_easyicon_net_256.png" width="102" height="108" /></p>
+<p align="center"><img src="images/user.png" width="102" height="108" /></p>
 <p align="center">
-  <strong>   用户名</strong>：<span class="STYLE4">Administrator</span></p>
-  <p align="center"><strong>用户权限</strong>：<span class="STYLE4">系统管理员</span></p>
+  <strong>   用户名</strong>：<span class="STYLE4">
+  <?PHP
+  	$username=$_COOKIE['user'];
+	echo "<script language='javascript' >";
+	echo "document.write('$username');";
+	echo "</script>";
+  ?>
+  </span></p>
+  <p align="center"><strong>用户权限</strong>：<span class="STYLE4">
+  	<?PHP
+  	$group=$_COOKIE['group'];
+	echo "<script language='javascript' >";
+	echo "document.write('$group');";
+	echo "</script>";
+  ?>
+  </span></p>
 <form name="newsletter" action=" " method="post">
 <h2>搜索活动信息</h2>
 <input type="text" name="text" value="" />
@@ -44,14 +60,14 @@
 <!--right panel start -->
 <div id="right">
 <ul class="nav">
-<li><a href="index.htm" class="hover">&#20027;&#39029;</a></li>
-<li><a href="inner-page.html" class="navLink">更多信息</a></li>
+<li><a href="adminindex.php" class="hover">&#20027;&#39029;</a></li>
+<li><a href="inner-page.php" class="navLink">最新活动信息</a></li>
 <li><a href="apply.html" class="navLink">&#31038;&#22242;</a></li>
-<li><a href="userinfo.html" class="navLink">&#20010;&#20154;&#20449;&#24687;</a></li>
-<li><a href="bbs.html" class="navLink">&#35770;&#22363;</a></li>
-<li><a href="rank.html" class="navLink">&#25490;&#34892;&#27036;</a></li>
-<li><a href="help.html" class="navLink">&#24110;&#21161;</a></li>
-<li class="noImg"><a href="contact.html" class="navLink">&#36864;&#20986;</a></li>
+<li><a href="personinfo.php" class="hover">个人信息</a></li>
+<li><a href="inner-page.php" class="navLink">&#35770;&#22363;</a></li>
+<li><a href="inner-page.php" class="navLink">&#25490;&#34892;&#27036;</a></li>
+<li><a href="inner-page.php" class="navLink">&#24110;&#21161;</a></li>
+<li class="noImg"><a href="login.html" class="navLink">&#36864;&#20986;</a></li>
 </ul>
 <a href=" " class="subscribe"></a>
 <ul class="nav">
@@ -68,7 +84,7 @@
 <h2><span>光明行志愿者招募</span></h2>
 <p class="bestTxt">光明行2012暑期爱心支教志愿者招募书
 </p>
-<p class="bestTxt2"><a href="inner-page.html"><strong>光明行2012年暑期支教活动</strong>,</a><span class="STYLE1">期待着你的参与！让我们携手，服务基层的教育，光明传承希望，用爱点亮光芒！</span></p>
+<p class="bestTxt2"><a href="inner-page.php"><strong>光明行2012年暑期支教活动</strong>,</a><span class="STYLE1">期待着你的参与！让我们携手，服务基层的教育，光明传承希望，用爱点亮光芒！</span></p>
 <p class="bestTxt3"><strong>一．志愿者招募要求</strong></p>
 <p class="bestTxt3"><strong>（1</strong><strong>）年满18</strong><strong>周岁，身体素质良好、适应能力强、能吃苦耐劳，品德高尚、思想正派，愿意无偿奉献时间和精力，具有单独承担民事责任能力的成年公民；并征得父母同意。</strong></p>
 <p class="bestTxt3"><strong>（2</strong><strong>）具有爱心和强烈的责任心，富有朝气和活力，善于调动课堂气氛，能够激发学生的学习热情，对支教的科目有一定认知，对学生负责；</strong></p>
@@ -82,14 +98,14 @@
 <!--last panel start -->
 <div id="last">
 <p class="lastTop"></p>
-<h2 class="res">系统管理员权限</h2>
+<h2 class="res">普通用户权限</h2>
 <ul>
-<li><a href="apply.html">查看社团申请</a></li>
-<li><a href=" ">管理会员资料</a></li>
-<li><a href=" ">发布活动信息</a></li>
-<li><a href=" ">校企合作事宜</a></li>
-<li><a href=" ">站内公告管理.</a></li>
-<li><a href=" ">站内留言管理</a></li>
+<li><a href="apply.html">申请加入社团</a></li>
+<li><a href=" ">管理账户资料</a></li>
+<li><a href=" ">查看活动信息</a></li>
+<li><a href=" ">给管理员留言</a></li>
+<li><a href=" ">查看站内公告</a></li>
+<li><a href="personinfo.php">查看个人信息</a></li>
 </ul>
 <h2 class="future">合作网站</h2>
 <h3>校内网站</h3>
@@ -122,7 +138,7 @@
       <li><a href=" ">Targets</a>|</li>
       <li><a href=" ">Communication</a>|</li>
       <li><a href=" ">Future</a>|</li>
-      <li><a href=" ">Contact</a></li>
+      <li><a href=" ">login</a></li>
     </ul>
     <p class="copyright">Copyright Intro Type 3 20XX. All Rights Reserved.</p>
     <p class="design">Designed by : <a href=" /" target="_blank" class="link">web 2-12组 </a></p>
@@ -131,4 +147,3 @@
 <!--footerMain end -->
 </body>
 </html>
-
