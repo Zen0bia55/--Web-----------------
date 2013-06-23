@@ -33,10 +33,10 @@
 <!--right panel start -->
 <div id="right">
 <ul class="nav">
-<li><a href="index.htm" class="hover">主页</a></li>
+<li><a href="adminindex.php" class="hover">主页</a></li>
 <li><a href="inner-page.php" class="navLink">更多信息</a></li>
-<li><a href="apply.html" class="navLink">社团</a></li>
-<li><a href="inner-page.php" class="navLink">个人信息</a></li>
+<li><a href="adminapply.php" class="navLink">社团</a></li>
+<li><a href="personinfo.php" class="navLink">个人信息</a></li>
 <li><a href="inner-page.php" class="navLink">论坛</a></li>
 <li><a href="inner-page.php" class="navLink">排行榜</a></li>
 <li><a href="inner-page.php" class="navLink">帮助</a></li>
@@ -55,8 +55,57 @@
 <!--best start -->
 <div id="best">
 <h2><span>社团加入申请</span></h2>
-<p class="bestTxt">暂无社团申请
-</p>
+<div class="bestTxt">
+<form action="adminapplyhelper.php" method="get">
+<div class="contacttext" id="yourname">
+    	<div align="left">
+        申请人:
+        </div>
+</div>
+<div class="contactformfield" id="username">
+	<span id="usernametext">
+  		<?PHP
+			$db=new MySQLi("localhost","root","123456","web");
+			$query="select username,clubname from club where club.join='no'";
+			$result=$db->query($query,MYSQLI_STORE_RESULT);
+			if($result->num_rows==0)
+			{
+				$username="无";
+				$clubname="无";
+				echo "<script language='javascript'>";
+            	echo "document.write('无');";
+				echo "</script>";	
+			}else{
+				list($username,$clubname)=$result->fetch_row();
+				echo $username;
+			}
+		?>
+        </span>
+</div>
+<div class="contacttext" >
+	<div align="left">
+    申请加入社团：
+    </div>
+</div>
+<div class="contactformfield" id="clubname" >
+<span id="clubnametext">
+	<?PHP
+        echo $clubname;
+	?>
+    </span>
+</div>
+<div>
+    <input type="hidden" name="usernametext"  value="<?PHP echo $username?>" />
+    <input type="hidden" name="clubnametext" value="<?PHP echo $clubname?>" />
+</div>
+<div class="contacttext" align="right">
+	<input type="submit" value="同意" />
+</div>
+<div class="contactformfield" align="left">
+	<input type="button" value="拒绝"/>
+</div>
+</form>
+</div>
 
 <p class="bestTxt3"><a href=" "></a></p>
 <br class="spacer" />
