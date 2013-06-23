@@ -2,17 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>高校社团信息发布平台-登陆</title>
+<title>登陆</title>
 <link href="innerstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<script type="text/javascript" src="login.js">
+<script language="javascript" type="text/javascript">
+  function warning()
+	{
+		alert("请先登陆本系统!!!")
+	}
 </script>
 <!--main start -->
 <div id="main">
 <!--left panel start -->
 <div id="left">
-<a href="index.htm"><img src="images/logo1.jpg" alt="社团信息发布平台" width="247" height="97" border="0" class="logo" /></a>
+<a href="index.htm"><img src="images/logo1.jpg" alt="Intro type 3" width="247" height="97" border="0" class="logo" /></a>
 <ul class="botLink">
 <li class="bot"></li>
 <li class="bot"></li> 
@@ -21,14 +25,14 @@
 </div>
 <div id="right">
 <ul class="nav">
-<li><a href="index.htm" class="hover">&#20027;&#39029;</a></li>
-<li><a href="inner-page.html" class="navLink">更多信息</a></li>
-<li><a href="apply.html" class="navLink">&#31038;&#22242;</a></li>
-<li><a href="userinfo.html" class="navLink">&#20010;&#20154;&#20449;&#24687;</a></li>
-<li><a href="bbs.html" class="navLink">&#35770;&#22363;</a></li>
-<li><a href="rank.html" class="navLink">&#25490;&#34892;&#27036;</a></li>
-<li><a href="help.html" class="navLink">&#24110;&#21161;</a></li>
-<li class="noImg"><a href="contact.html" class="navLink">&#36864;&#20986;</a></li>
+<li><a  class="hover" onclick="warning()" href="javascript:void(0)">&#20027;&#39029;</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">最新活动信息</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">&#31038;&#22242;</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">&#20010;&#20154;&#20449;&#24687;</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">&#35770;&#22363;</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">&#25490;&#34892;&#27036;</a></li>
+<li><a onclick="warning()" href="javascript:void(0)" class="navLink">&#24110;&#21161;</a></li>
+<li class="noImg"><a onclick="warning()" href="javascript:void(0)" class="navLink">&#36864;&#20986;</a></li>
 </ul>
 <a href=" " class="subscribe"></a>
 <ul class="nav">
@@ -42,16 +46,33 @@
 <!--rightBot end -->
 <br class="spacer" />
 <div id="best">
-<form>
-用户名：
-<input type="text" name="user">
-<br/><br/>
-密  
-码 ：    
-<input type="password" name="password" />
-<br/>
-<br />
-<input name="login" type="button" class="subscribe" value="登陆" onclick="login()"/>
-<input name="re" type="button" class="subscribe" value="注册" onclick="window.open('register.html')"/>
-</form>
+<form action="login.php" method="get">
+	<div class="contacttext" id="yourname">
+  		<div align="left">&#29992;&#25143;&#21517;: </div>
+	</div>
+	<div class="contactformfield" id="nametextbox">
+  		<div align="left">
+   			 <input name="nametextfield" type="text" class="textboxEffect" />
+		</div>
+    </div>
+	<div class="contacttext" id="password">
+    	<div align="left">&#23494;&#30721;:</div>
+    </div>
+	<div class="contactformfield" id="passwordtextbox">
+  		<div align="left">
+    		<input name="passwordtextfield" type="password" class="textboxEffect" />
+  		</div>
+	</div>
+    <div class="contacttext">
+		<div align="right"><input name="login" type="submit" value="登陆" /></div>
+     </div>   
+	<div class="contactformfield">
+    	<div align="left">
+    <input name="re" type="button"  value="注册" onclick="window.open('register.html')"/>
+    	</div>
+    </div>
+ </form>   
 </div>
+
+
+
